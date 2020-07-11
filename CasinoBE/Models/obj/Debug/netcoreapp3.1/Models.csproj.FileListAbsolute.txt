@@ -1,0 +1,18 @@
+D:\Projects\BlumeDigital Solo\29\Models\bin\Debug\netcoreapp3.1\Models.deps.json
+D:\Projects\BlumeDigital Solo\29\Models\bin\Debug\netcoreapp3.1\Models.dll
+D:\Projects\BlumeDigital Solo\29\Models\bin\Debug\netcoreapp3.1\Models.pdb
+D:\Projects\BlumeDigital Solo\29\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfoInputs.cache
+D:\Projects\BlumeDigital Solo\29\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfo.cs
+D:\Projects\BlumeDigital Solo\29\Models\obj\Debug\netcoreapp3.1\Models.csproj.CoreCompileInputs.cache
+D:\Projects\BlumeDigital Solo\29\Models\obj\Debug\netcoreapp3.1\Models.dll
+D:\Projects\BlumeDigital Solo\29\Models\obj\Debug\netcoreapp3.1\Models.pdb
+D:\Projects\BlumeDigital Solo\29\Models\obj\Debug\netcoreapp3.1\Models.csprojAssemblyReference.cache
+C:\Users\nafis\Desktop\29\CasinoBE\Models\bin\Debug\netcoreapp3.1\Models.deps.json
+C:\Users\nafis\Desktop\29\CasinoBE\Models\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\nafis\Desktop\29\CasinoBE\Models\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\nafis\Desktop\29\CasinoBE\Models\obj\Debug\netcoreapp3.1\Models.csprojAssemblyReference.cache
+C:\Users\nafis\Desktop\29\CasinoBE\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfoInputs.cache
+C:\Users\nafis\Desktop\29\CasinoBE\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfo.cs
+C:\Users\nafis\Desktop\29\CasinoBE\Models\obj\Debug\netcoreapp3.1\Models.csproj.CoreCompileInputs.cache
+C:\Users\nafis\Desktop\29\CasinoBE\Models\obj\Debug\netcoreapp3.1\Models.dll
+C:\Users\nafis\Desktop\29\CasinoBE\Models\obj\Debug\netcoreapp3.1\Models.pdb

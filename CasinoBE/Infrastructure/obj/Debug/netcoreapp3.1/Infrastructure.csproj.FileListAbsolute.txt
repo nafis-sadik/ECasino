@@ -1,0 +1,30 @@
+D:\Projects\BlumeDigital Solo\29\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.deps.json
+D:\Projects\BlumeDigital Solo\29\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.json
+D:\Projects\BlumeDigital Solo\29\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.dev.json
+D:\Projects\BlumeDigital Solo\29\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.dll
+D:\Projects\BlumeDigital Solo\29\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+D:\Projects\BlumeDigital Solo\29\Infrastructure\bin\Debug\netcoreapp3.1\Models.dll
+D:\Projects\BlumeDigital Solo\29\Infrastructure\bin\Debug\netcoreapp3.1\Models.pdb
+D:\Projects\BlumeDigital Solo\29\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csprojAssemblyReference.cache
+D:\Projects\BlumeDigital Solo\29\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfoInputs.cache
+D:\Projects\BlumeDigital Solo\29\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfo.cs
+D:\Projects\BlumeDigital Solo\29\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CoreCompileInputs.cache
+D:\Projects\BlumeDigital Solo\29\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
+D:\Projects\BlumeDigital Solo\29\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
+D:\Projects\BlumeDigital Solo\29\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
+D:\Projects\BlumeDigital Solo\29\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.genruntimeconfig.cache
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.deps.json
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.json
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.dev.json
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.dll
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csprojAssemblyReference.cache
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfo.cs
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
+C:\Users\nafis\Desktop\29\CasinoBE\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.genruntimeconfig.cache
