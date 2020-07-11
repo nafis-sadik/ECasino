@@ -6812,11 +6812,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nafis\\Desktop\\29\\CasinoBE\\CasinoBE_Testting\\CasinoBE_Testting.csproj",
+      "projectUniqueName": "C:\\Users\\nafis\\Desktop\\ECasino\\CasinoBE\\CasinoBE_Testting\\CasinoBE_Testting.csproj",
       "projectName": "CasinoBE_Testting",
-      "projectPath": "C:\\Users\\nafis\\Desktop\\29\\CasinoBE\\CasinoBE_Testting\\CasinoBE_Testting.csproj",
+      "projectPath": "C:\\Users\\nafis\\Desktop\\ECasino\\CasinoBE\\CasinoBE_Testting\\CasinoBE_Testting.csproj",
       "packagesPath": "C:\\Users\\nafis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nafis\\Desktop\\29\\CasinoBE\\CasinoBE_Testting\\obj\\",
+      "outputPath": "C:\\Users\\nafis\\Desktop\\ECasino\\CasinoBE\\CasinoBE_Testting\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nafis\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6832,8 +6832,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\nafis\\Desktop\\29\\CasinoBE\\LogicLayer\\LogicLayer.csproj": {
-              "projectPath": "C:\\Users\\nafis\\Desktop\\29\\CasinoBE\\LogicLayer\\LogicLayer.csproj"
+            "C:\\Users\\nafis\\Desktop\\ECasino\\CasinoBE\\LogicLayer\\LogicLayer.csproj": {
+              "projectPath": "C:\\Users\\nafis\\Desktop\\ECasino\\CasinoBE\\LogicLayer\\LogicLayer.csproj"
             }
           }
         }

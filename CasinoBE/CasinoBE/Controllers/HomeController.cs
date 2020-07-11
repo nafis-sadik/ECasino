@@ -7,7 +7,7 @@ using Models.DataModels;
 
 namespace CasinoBE.Controllers
 {
-    public class ThentyNine : Controller
+    public class HomeController : Controller
     {
         public IActionResult Index()
         {

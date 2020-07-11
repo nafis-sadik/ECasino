@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JnRnbLOi2YXJORPXHl+0lzSeCq18dxBNpvB+DfmLyvvaf8D3sFLbfyaUYXtu9vK7ujELRw0pqkutG9SgBaQdwg==",
+  "dgSpecHash": "2UavWh6aDuQZMw7ZOghkgNSJwxBRAG954NvZ/4lHxyESIes9hwNStWCQfv7flSPqjSS/99DMSW1DaDjTsDtH7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nafis\\Desktop\\29\\CasinoBE\\CasinoBE_Testting\\CasinoBE_Testting.csproj",
+  "projectFilePath": "C:\\Users\\nafis\\Desktop\\ECasino\\CasinoBE\\CasinoBE_Testting\\CasinoBE_Testting.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nafis\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\nafis\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",

@@ -2,6 +2,7 @@
 using LogicLayer.Abstraction;
 using LogicLayer.Repositories;
 using Models;
+using Models.DataModels;
 using Models.DataModels.Entities;
 using Models.Entities;
 using System;
@@ -22,7 +23,7 @@ namespace LogicLayer.Implementation
             response = new ResponseModel<User>();
         }
 
-        public ResponseModel<User> CheckUserInDatabase(ulong playerId)
+        public ResponseModel<Player> CheckUserInDatabase(ulong playerId)
         {
             try 
             {
@@ -39,7 +40,7 @@ namespace LogicLayer.Implementation
             return response;
         }
 
-        public ResponseModel<User> RegisterUser(User user)
+        public ResponseModel<Player> RegisterUser(Player user)
         {
             try 
             {

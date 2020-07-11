@@ -4,7 +4,7 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace Models.Entities
 {
-    public class User
+    public abstract class User
     {
         // Messenger ID
         [Key]
