@@ -8,6 +8,9 @@ namespace Infrastructure
 {
     public class DBAccess: DbContext
     {
+        public DbSet<User> Users { get; set; }
+        public DbSet<CrashLog> Crash_Log { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
@@ -16,7 +19,13 @@ namespace Infrastructure
 
             optionsBuilder.UseMySql(configuration.GetConnectionString("DefaultConnection"));
         }
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<CrashLog> Crash_Log { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<User>();
+            builder.Entity<CrashLog>();
+
+            base.OnModelCreating(builder);
+        }
     }
 }

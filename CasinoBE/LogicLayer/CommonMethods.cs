@@ -1,4 +1,5 @@
 ﻿using Models.DataModels;
+using Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -23,6 +24,14 @@ namespace LogicLayer
                 deck[secondElementIndex] = temp;
             }
             return deck;
+        }
+        public static Player GetPlayerFromUser(User user)
+        {
+            return new Player {
+                Coins = user.Coins,
+                UserName = user.UserName,
+                ProfilePicLoc = user.ProfilePicLoc
+            };
         }
     }
 }

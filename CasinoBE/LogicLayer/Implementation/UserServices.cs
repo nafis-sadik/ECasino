@@ -15,20 +15,20 @@ namespace LogicLayer.Implementation
     {
         private RepositoryBase<User> _userRepository;
         private ICrashLoggingService crashLoggingService;
-        private dynamic response;
+        private ResponseModel<Player> response;
         public UserServices()
         {
             _userRepository = new RepositoryBase<User>();
             crashLoggingService = new CrashLoggingService();
-            response = new ResponseModel<User>();
+            response = new ResponseModel<Player>();
         }
 
         public ResponseModel<Player> CheckUserInDatabase(ulong playerId)
         {
             try 
             {
-                var player = _userRepository.Get(x => x.PlayerID == playerId);
-                if (player != null) { response.ObjResponse = player; }
+                var user = _userRepository.Get(x => x.PlayerID == playerId);
+                if (user != null) { response.ObjResponse = CommonMethods.GetPlayerFromUser(user); }
                 response.IsValidResponse = true;
             }
             catch (Exception ex)

@@ -26,7 +26,7 @@ namespace CasinoBE.Controllers
         {
             response = userServices.CheckUserInDatabase(id);
             if (response.IsValidResponse)
-                return Ok(response.ObjResponse);
+                return Ok(response);
             else
                 return BadRequest(response);
         }

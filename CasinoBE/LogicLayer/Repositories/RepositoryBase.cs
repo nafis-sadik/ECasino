@@ -11,9 +11,9 @@ namespace LogicLayer.Repositories
 {
     class RepositoryBase <T> where T : class
     {
-        private DBAccess db;
-        private DbSet<T> _dbSet;
-        private readonly IDbContextTransaction transaction;
+        public DBAccess db;
+        public DbSet<T> _dbSet;
+        public readonly IDbContextTransaction transaction;
         public RepositoryBase()
         {
             db = new DBAccess();
