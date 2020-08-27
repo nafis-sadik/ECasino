@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using LogicLayer.Abstraction;
 using LogicLayer.Implementation;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Models.DataModels;
 using Models.DataModels.Entities;
@@ -22,6 +23,7 @@ namespace CasinoBE.Controllers
         }
 
         [HttpGet]
+        [EnableCors("Allow CORS for Facebook & DevEnv")]
         public IActionResult CheckRegistration(ulong id)
         {
             response = userServices.CheckUserInDatabase(id);

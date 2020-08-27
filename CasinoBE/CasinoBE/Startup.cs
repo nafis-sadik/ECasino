@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using Google.Protobuf.WellKnownTypes;
 
 namespace CasinoBE
 {
@@ -31,8 +32,14 @@ namespace CasinoBE
             services.AddDistributedMemoryCache();
             services.AddSession();
             services.AddControllers();
-            services.AddDbContext<DBAccess>(/*opt => opt.UseInMemoryDatabase("blumehrc_29")*/);
+            services.AddDbContext<DBAccess>();
             services.AddMvc();
+            services.AddCors(options => {
+                options.AddPolicy("Allow CORS for Facebook & DevEnv", 
+                    builder => builder.WithOrigins("localhost", "www.facebook.com", "localhost:8029")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,11 +56,7 @@ namespace CasinoBE
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-
             app.UseStaticFiles();
-
-            app.UseAuthorization();
 
             app.UseSession();
 
@@ -67,6 +70,20 @@ namespace CasinoBE
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseCors("Allow CORS for Facebook & DevEnv");
+
+            //app.UseCors(builder =>
+            //{
+            //    builder.WithOrigins("https://www.facebook.com");
+            //    builder.WithOrigins("https://localhost:8029");
+            //    builder.WithOrigins("http://www.facebook.com");
+            //    builder.WithOrigins("http://localhost:8029");
+            //    builder.AllowAnyHeader();
+            //    builder.AllowAnyMethod();
+            //});
+
+            app.UseHttpsRedirection();
         }
     }
 }

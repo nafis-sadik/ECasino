@@ -1,5 +1,5 @@
 const RoutingConst = {
-    Host: 'https://localhost:8080',
+    Host: 'https://localhost:8029',
     CasinoBE: 'https://localhost:44371',
     Backgrounds : {
         geometric_shape_1: '/assets/realistic-elegant-geometric-shapes-background/img.jpg',
@@ -12,9 +12,9 @@ const RoutingConst = {
 }
 
 var Player = {
-    contextId: Object,
-    contextType: Object,
-    playerName: Object,
-    playerPic: Object,
-    playerId : Object
+    contextId: '',
+    contextType: '',
+    playerName: '',
+    playerPic: '',
+    playerId : ''
 }

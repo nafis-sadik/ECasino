@@ -19,8 +19,9 @@ let StartGame = () => {
         Player.playerName = FBInstant.player.getName().toString();
         Player.playerPic = FBInstant.player.getPhoto().toString();
         Player.playerId = FBInstant.player.getID().toString();
+        console.log('test');
         console.log(FBInstant.player.getID().toString());
-        console.log(Player.playerId.toString());
+        console.log(Player.playerId);
         appStart();
         game.start();
     }); 
