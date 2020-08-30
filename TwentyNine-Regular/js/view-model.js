@@ -48,7 +48,7 @@ let appStart = (player) => {
             200: () => {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Wellcome Back' + player.playerName + '!!',
+                    title: 'Wellcome Back ' + player.UserName + '!!',
                     showConfirmButton: false
                 });
             }
