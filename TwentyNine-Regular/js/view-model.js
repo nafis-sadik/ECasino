@@ -1,31 +1,56 @@
-let appStart = () => {
+let appStart = (player) => {
     loadView(RoutingConst.Components.authGate);
-
+    if(player == null || player == NaN || player == undefined)
+        return;
     $.ajax({
-        url: RoutingConst.CasinoBE + '/User/CheckRegistration?id=' + Player.contextId,
+        url: RoutingConst.CasinoBE + '/User/CheckRegistration?id=' + player.PlayerID,
         type: 'GET',
         statusCode: {
             204: () => {                
                 Swal.fire({
-                    title: '<strong>Hello ' + Player.playerName + '!!</strong>',
+                    title: '<strong>Hello ' + player.UserName + '!!</strong>',
                     icon: 'info',
                     html:
-                    'You can use <b>bold text</b>, ' +
-                    '<a href="//sweetalert2.github.io">links</a> ' +
-                    'and other HTML tags',
+                    'Looks like you are <b>new here!</b> <br> ' +
+                    'Please sing up to proceed',
                     showCloseButton: true,
                     showCancelButton: true,
-                    focusConfirm: false,
-                    confirmButtonText:
-                    '<i class="fa fa-thumbs-up"></i> Great!',
-                    confirmButtonAriaLabel: 'Thumbs up, great!',
-                    cancelButtonText:
-                    '<i class="fa fa-thumbs-down"></i>',
-                    cancelButtonAriaLabel: 'Thumbs down'
+                    focusConfirm: true,
+                    confirmButtonText:'Sing Up!',
+                    cancelButtonText:'Cancel',
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    footer: '<a href>Terms and Conditions</a>'
+                }).then((result) => {
+                    if (result.value) {
+                        $.ajax({
+                            url: RoutingConst.CasinoBE + '/User/RegisterNewUser',
+                            type: 'POST',
+                            data: player,
+                            success: () => {          
+                                Swal.fire(
+                                    'Registered!',
+                                    'Your blume account has been registered.',
+                                    'success'
+                                );
+                            },
+                            error: () => {
+                                Swal.fire(                                    
+                                    'Failed!',
+                                    'FGailed to sign you up!',
+                                    'error'
+                                );
+                            }
+                        });
+                    }
                 });
             }, 
             200: () => {
-                alert('User Found');
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Wellcome Back' + player.playerName + '!!',
+                    showConfirmButton: false
+                });
             }
         },
         error: (res) => {

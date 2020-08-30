@@ -34,17 +34,14 @@ namespace CasinoBE
             services.AddControllers();
             services.AddDbContext<DBAccess>();
             services.AddMvc();
-            services.AddCors(options => {
-                options.AddPolicy("Allow CORS for Facebook & DevEnv", 
-                    builder => builder.WithOrigins("localhost", "www.facebook.com", "localhost:8029")
-                    .AllowAnyHeader()
-                    .AllowAnyMethod());
-            });
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("MyPolicy");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -70,18 +67,6 @@ namespace CasinoBE
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
-
-            app.UseCors("Allow CORS for Facebook & DevEnv");
-
-            //app.UseCors(builder =>
-            //{
-            //    builder.WithOrigins("https://www.facebook.com");
-            //    builder.WithOrigins("https://localhost:8029");
-            //    builder.WithOrigins("http://www.facebook.com");
-            //    builder.WithOrigins("http://localhost:8029");
-            //    builder.AllowAnyHeader();
-            //    builder.AllowAnyMethod();
-            //});
 
             app.UseHttpsRedirection();
         }

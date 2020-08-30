@@ -11,10 +11,12 @@ const RoutingConst = {
     }
 }
 
-var Player = {
-    contextId: '',
-    contextType: '',
-    playerName: '',
-    playerPic: '',
-    playerId : ''
+class Player {
+    constructor(ContextId, ContextType, PlayerName, PlayerPic, PlayerId){
+        this.contextId = ContextId;
+        this.contextType = ContextType;
+        this.UserName = PlayerName;
+        this.ProfilePicLoc = PlayerPic;
+        this.PlayerID = PlayerId;
+    }
 }

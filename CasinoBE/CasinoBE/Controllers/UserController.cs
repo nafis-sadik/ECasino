@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Models.DataModels;
 using Models.DataModels.Entities;
-
+using Microsoft.AspNetCore.Http;
 namespace CasinoBE.Controllers
 {
     public class UserController : Controller
@@ -23,14 +23,16 @@ namespace CasinoBE.Controllers
         }
 
         [HttpGet]
-        [EnableCors("Allow CORS for Facebook & DevEnv")]
         public IActionResult CheckRegistration(ulong id)
         {
             response = userServices.CheckUserInDatabase(id);
             if (response.IsValidResponse)
-                return Ok(response);
+                if (response.ObjResponse != null)
+                    return StatusCode(StatusCodes.Status200OK);
+                else
+                    return StatusCode(StatusCodes.Status204NoContent);
             else
-                return BadRequest(response);
+                return StatusCode(StatusCodes.Status500InternalServerError);
         }
 
         [HttpPost]
@@ -38,9 +40,9 @@ namespace CasinoBE.Controllers
         {
             response = userServices.RegisterUser(user);
             if (response.IsValidResponse)
-                return Ok();
+                return StatusCode(StatusCodes.Status201Created);
             else
-                return BadRequest(response.msg);
+                return StatusCode(StatusCodes.Status500InternalServerError);
         }
     }
 }

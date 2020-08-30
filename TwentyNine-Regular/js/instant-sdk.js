@@ -14,15 +14,15 @@ FBInstant.initializeAsync()
 let StartGame = () => {
     FBInstant.startGameAsync()
     .then(() => {
-        Player.contextId = FBInstant.context.getID().toString();
-        Player.contextType = FBInstant.context.getType().toString();
-        Player.playerName = FBInstant.player.getName().toString();
-        Player.playerPic = FBInstant.player.getPhoto().toString();
-        Player.playerId = FBInstant.player.getID().toString();
-        console.log('test');
-        console.log(FBInstant.player.getID().toString());
-        console.log(Player.playerId);
-        appStart();
+        let ContextId = FBInstant.context.getID();
+        let ContextType = FBInstant.context.getType();
+      
+        let PlayerName = FBInstant.player.getName();
+        let PlayerPic = FBInstant.player.getPhoto();
+        let PlayerId = FBInstant.player.getID();
+
+        let currentPlayer = new Player(ContextId, ContextType, PlayerName, PlayerPic, PlayerId);
+        appStart(currentPlayer);
         game.start();
     }); 
 }

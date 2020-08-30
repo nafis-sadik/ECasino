@@ -49,9 +49,9 @@ namespace LogicLayer.Implementation
                     response.ObjResponse = user;
                     response.msg = ResponseConstant.Success;
                 }
-                response.IsValidResponse = true;
                 _userRepository.Save();
                 _userRepository.Commit();
+                response.IsValidResponse = true;
             }
             catch (Exception ex)
             {
