@@ -1,14 +1,19 @@
-let appStart = (player) => {
+let appStart = () => {
     loadView(RoutingConst.Components.authGate);
-    if(player == null || player == NaN || player == undefined)
+    if(Player.Instance instanceof Player)
+        authUser();
+    else
         return;
+}
+
+let authUser = () => {    
     $.ajax({
-        url: RoutingConst.CasinoBE + '/User/CheckRegistration?id=' + player.PlayerID,
+        url: RoutingConst.CasinoBE + '/User/CheckRegistration?id=' + Player.Instance.PlayerID,
         type: 'GET',
         statusCode: {
             204: () => {                
                 Swal.fire({
-                    title: '<strong>Hello ' + player.UserName + '!!</strong>',
+                    title: '<strong>Hello ' + Player.Instance.UserName + '!!</strong>',
                     icon: 'info',
                     html:
                     'Looks like you are <b>new here!</b> <br> ' +
@@ -33,6 +38,7 @@ let appStart = (player) => {
                                     'Your blume account has been registered.',
                                     'success'
                                 );
+                                loadView(RoutingConst.Components.Home);
                             },
                             error: () => {
                                 Swal.fire(                                    
@@ -48,9 +54,10 @@ let appStart = (player) => {
             200: () => {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Wellcome Back ' + player.UserName + '!!',
+                    title: 'Wellcome Back ' + Player.Instance.UserName + '!!',
                     showConfirmButton: false
                 });
+                loadView(RoutingConst.Components.Home);
             }
         },
         error: (res) => {

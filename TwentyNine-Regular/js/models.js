@@ -12,11 +12,23 @@ const RoutingConst = {
 }
 
 class Player {
-    constructor(ContextId, ContextType, PlayerName, PlayerPic, PlayerId){
-        this.contextId = ContextId;
-        this.contextType = ContextType;
-        this.UserName = PlayerName;
-        this.ProfilePicLoc = PlayerPic;
-        this.PlayerID = PlayerId;
+    static Instance = '';
+    constructor(_contextId, _contextType, _playerName, _playerPicUrl, _playerId){
+        if(Player.Instance instanceof Player)
+            return Player.Instance;
+        
+        if(_playerId == null || _playerId == NaN || _playerId == undefined){
+            console.error('Invalid Player Id recieved from sdk');
+            return;
+        }
+        
+        this.ContextID = _contextId;
+        this.ContextType = _contextType;
+        
+        this.UserName = _playerName;
+        this.ProfilePicLoc = _playerPicUrl;
+        this.PlayerID = _playerId;
+        
+        Player.Instance = this; 
     }
 }

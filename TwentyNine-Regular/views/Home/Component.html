@@ -1,0 +1,17 @@
+<style id="StyleSheetHolder"></style>
+<img src="" alt="Proile Picture" id="ProfilePic">
+
+<script>
+    $(document).ready(() => {
+        $('#ProfilePic').attr('src', Player.Instance.ProfilePicLoc);
+        $.ajax({
+            url: RoutingConst.Host + RoutingConst.Components.Home + 'Component.css',
+            success: (res) => {
+                $('#StyleSheetHolder').append(res);
+            },
+            error: (res) => {
+                console.error(res);
+            }
+        });
+    });
+</script>
